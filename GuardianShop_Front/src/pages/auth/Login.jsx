@@ -10,8 +10,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await handleAuth("login"); // Realiza el proceso de autenticación
-      navigate("/products", { state: { showSuccess: true } }); // Redirige con información extra
+      await handleAuth("login");
+      navigate("/products", { state: { showSuccess: true } });
     } catch (error) {
       toast.error("Login failed. Please check your credentials.", error, {
         position: "top-center",
@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className="container mx-auto mt-5 md:justify-center xl:top-0 md:top-2 sm:top-10 m-8 anyBox">
-      <ToastContainer /> {/* Contenedor de toasts */}
+      <ToastContainer /> 
       <form
         onSubmit={handleSubmit}
         className="container md:w-[518px] md:h-[500px] w-[306px] h-[464px] bg-fourty shadow-2xl rounded-sm text-sm md:text-xl anyBox"

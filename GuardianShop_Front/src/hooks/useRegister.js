@@ -52,10 +52,10 @@ const useRegister = () => {
             setSuccessMessage(response.data.message || 'Registration successful!');
             setErrorMessage(null);
         } catch (error) {
-            console.error('Error during registration:', error); // Log para ver el error completo
+            console.error('Error during registration:', error);
             setErrorMessage(error.response?.data?.message || 'Registration failed. Please try again.');
             setSuccessMessage(null);
-            throw new Error(error.response?.data?.message || 'Registration failed'); // Lanza error
+            throw new Error(error.response?.data?.message || 'Registration failed');
         }
     };
 

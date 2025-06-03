@@ -1,7 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Global } from '../helpers/Global';
-
-// Acción asíncrona para obtener los productos
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (page, { rejectWithValue }) => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import Orders from '../cart/Orders'
 
 const Profile = () => {

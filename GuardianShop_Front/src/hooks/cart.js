@@ -9,7 +9,6 @@ const useCart = () => {
     const { isAuthenticated, userData  } = useAuth();
     const navigate = useNavigate();
 
-    // Método para agregar un producto al carrito
     const addToCart = async ({ cartId, inventoryId, quantity }) => {
         if (!isAuthenticated) {
             navigate('/login');

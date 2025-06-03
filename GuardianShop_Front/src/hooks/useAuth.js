@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { login, logout } from '../redux/authSlice'; // Ajusta la ruta según tu estructura
+import { login, logout } from '../redux/authSlice';
 import { Global } from '../helpers/Global';
 
 const useAuth = () => {

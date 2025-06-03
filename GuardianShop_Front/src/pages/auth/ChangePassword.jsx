@@ -71,8 +71,8 @@ const ChangePassword = () => {
 
     return (
         <div className='container mx-auto mt-5 md:justify-center xl:top-0 md:top-2 sm:top-10 m-8 anyBox'>
-            <ToastContainer /> {/* Contenedor para los anuncios */}
-            {message && <p>{message}</p>} {/* Muestra el mensaje si hay uno */}
+            <ToastContainer />
+            {message && <p>{message}</p>}
             {!tokenFromQuery ? (
                 <form
                     onSubmit={handleEmailSubmit}

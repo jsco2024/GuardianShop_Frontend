@@ -11,8 +11,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { cartItems, validateCart } = useCart();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-
-  // Obtener los elementos del carrito al cargar el componente
   useEffect(() => {
     const fetchCartItems = async () => {
       if (isAuthenticated) {
@@ -24,18 +22,18 @@ const Navbar = () => {
       }
     };
     fetchCartItems();
-  }, [isAuthenticated]); // Dependemos solo de isAuthenticated
+  }, [isAuthenticated]);
 
   const handleCartClick = async () => {
     if (isAuthenticated) {
       try {
-        await validateCart(); // Esto debería manejar correctamente la validación
+        await validateCart();
         navigate("/cart");
       } catch (error) {
         console.error("Error al acceder al carrito:", error);
       }
     } else {
-      navigate("/login"); // Redirigir al login si no está autenticado
+      navigate("/login");
     }
   };
 

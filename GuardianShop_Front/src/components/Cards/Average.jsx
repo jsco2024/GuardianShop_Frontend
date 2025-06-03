@@ -8,66 +8,54 @@ const Average = () => {
   
 
   useEffect(() => {
-    // Configura el intervalo para actualizar el contador cada segundo
     const intervalId = setInterval(() => {
       setCount((prevCount) => {
         if (prevCount >= 15) {
-          clearInterval(intervalId); // Detiene el contador cuando llega a 15
+          clearInterval(intervalId);
           return prevCount;
         }
         return prevCount + 1;
       });
-    }, 100); // Cada segundo
-
-    // Limpia el intervalo cuando el componente se desmonte
+    }, 100);
     return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
-    // Configura el intervalo para actualizar el contador cada segundo
     const intervalId2 = setInterval(() => {
       setCount2((prevCount) => {
         if (prevCount >= 15345) {
-          clearInterval(intervalId2); // Detiene el contador cuando llega a 15
+          clearInterval(intervalId2);
           return prevCount;
         }
         return prevCount + 1;
       });
-    }, 0.005); // Cada segundo
-
-    // Limpia el intervalo cuando el componente se desmonte
+    }, 0.005); 
     return () => clearInterval(intervalId2);
   }, []);
 
   useEffect(() => {
-    // Configura el intervalo para actualizar el contador cada segundo
     const intervalId3 = setInterval(() => {
       setCount3((prevCount) => {
         if (prevCount >= 33) {
-          clearInterval(intervalId3); // Detiene el contador cuando llega a 15
+          clearInterval(intervalId3);
           return prevCount;
         }
         return prevCount + 1;
       });
-    }, 100); // Cada segundo
-
-    // Limpia el intervalo cuando el componente se desmonte
+    }, 100);
     return () => clearInterval(intervalId3);
   }, []);
 
   useEffect(() => {
-    // Configura el intervalo para actualizar el contador cada segundo
     const intervalId4 = setInterval(() => {
       setCount4((prevCount) => {
         if (prevCount >= 5) {
-          clearInterval(intervalId4); // Detiene el contador cuando llega a 15
+          clearInterval(intervalId4);
           return prevCount;
         }
         return prevCount + 1;
       });
-    }, 1000); // Cada segundo
-
-    // Limpia el intervalo cuando el componente se desmonte
+    }, 1000);
     return () => clearInterval(intervalId4);
   }, []);
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts, setCurrentPage } from "../../redux/productSlice"; // Ajusta la ruta según tu estructura
+import { fetchProducts, setCurrentPage } from "../../redux/productSlice";
 import "react-toastify/dist/ReactToastify.css";
 import bgPromo from "../../assets/bgPromo.svg";
 import useCart from "../../hooks/useCart";
@@ -12,8 +12,6 @@ const Products = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { addToCart } = useCart();
-
-  // Estado global de Redux
   const { products, error, totalPages, currentPage, loading } = useSelector(
     (state) => state.products
   );
@@ -31,7 +29,6 @@ const Products = () => {
   }, [location.state, navigate, location.pathname]);
 
   useEffect(() => {
-    // Cargar productos al cambiar de página
     dispatch(fetchProducts(currentPage));
   }, [dispatch, currentPage]);
 
@@ -157,8 +154,6 @@ const Products = () => {
           ))}
         </div>
       )}
-
-      {/* Paginación */}
       {totalPages > 0 && (
         <div
           className={`bg-fourty/80 rounded-md p-2 flex items-center justify-center mt-5`}
