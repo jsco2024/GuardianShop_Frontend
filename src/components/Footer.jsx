@@ -5,7 +5,7 @@ import world from '../assets/world.svg'
 import { Link } from 'react-router-dom'
 import meta from '../assets/meta.svg'
 import tiktok from '../assets/tiktok.svg'
-import instagram from '../assets/instagram.svg'
+import instagram from '../assets/Instagram.svg'
 import twitter from '../assets/twitter.svg'
 import WhatsApp from '../assets/WhatsApp.svg'
 
