@@ -20,7 +20,7 @@ const Products = () => {
 
   useEffect(() => {
     if (location.state?.showSuccess) {
-      toast.success("Login successful! Welcome to the products page.", {
+      toast.success(location.state.message || "Welcome to the products page!", {
         position: "top-center",
         autoClose: 3000,
       });

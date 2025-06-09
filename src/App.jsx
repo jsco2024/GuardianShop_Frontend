@@ -23,7 +23,7 @@ function App() {
         {/* Rutas que no requieren autenticación */}
         <Route index element={<Dashboard />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/contactForm" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/productDetails/:id" element={<ProductDetails />} />
 
         {/* Rutas que requieren autenticación */}

@@ -46,7 +46,7 @@ const Navbar = () => {
       </div>
       <div className="flex-row p-4">
         <div className="p-4">
-          <ol className="flex gap-2 md:gap-14 bg-tertiary w-[274px] md:w-[426px] h-[48px] lg:w-[1000px] lg:gap-44 justify-center items-center place-content-center rounded-md text-white mb-5">
+          <ol className="flex gap-2 md:gap-14 bg-tertiary w-[274px] md:w-[426px] h-[48px] lg:w-[1200px] lg:gap-44 justify-center items-center place-content-center rounded-md text-white mb-5">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -55,6 +55,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/products">Products</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="relative">
               <button onClick={handleCartClick}>
@@ -70,7 +73,7 @@ const Navbar = () => {
             </li>
           </ol>
         </div>
-        <div className="hidden md:flex md:bg-tertiary md:text-white md:w-[314px] lg:w-[800px] md:h-[48px] rounded-md md:place-content-center md:justify-center md:items-center md:ml-12">
+        <div className="hidden md:flex md:bg-tertiary md:text-white md:w-[314px] lg:w-[1000px] md:h-[48px] rounded-md md:place-content-center md:justify-center md:items-center md:ml-12">
           <img src={lupa} alt="Buscar" className="ml-8" />
           <input
             type="text"
